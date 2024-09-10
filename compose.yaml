@@ -19,7 +19,7 @@ services:
       - COS326_mongo_data:/data/db
 
   basex: # BaseX database
-    image: basex/basexhttp
+    image: basex/basexhttp:latest
     ports:
       - "1984:1984"
       - "8984:8984"
