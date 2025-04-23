@@ -30,9 +30,11 @@ services:
       - COS326_basex_webapp:/srv/basex/webapp
 
   neo4j: # Neo4j database
-    image: neo4j:5.9.0
+    image: neo4j:5.9.0-enterprise
     environment:
       NEO4J_AUTH: "neo4j/password123" # user/password
+      NEO4J_ACCEPT_LICENSE_AGREEMENT: "yes"
+      NEO4J_dbms_connector_bolt_enabled: "true"
     ports:
       - "7474:7474"
       - "7687:7687"
